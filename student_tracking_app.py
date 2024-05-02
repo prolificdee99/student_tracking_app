@@ -20,11 +20,11 @@ class Student:
     def check_homework(self):
         if not self.homework_done:
             print(f"{self.name}, have you done your assignment?")
-            answer = input("Enter 'yes' if done, 'no' otherwise: ").lower()  # Convert to lowercase
+            answer = input("Enter 'yes' if done, 'no' otherwise: ").lower()
             if answer == 'no':
-                print("You should go and do your assignment.")
+                print("You should go and do your assignment. Remember, every effort counts!")
             else:
-                print("Great job!")
+                print("Great job! Keep up the good work!")
                 self.homework_done = True
         else:
             print("Homework already done.")
@@ -32,11 +32,11 @@ class Student:
     def check_studied(self):
         if not self.studied_today:
             print(f"{self.name}, have you studied today?")
-            answer = input("Enter 'yes' if studied, 'no' otherwise: ").lower()  # Convert to lowercase
+            answer = input("Enter 'yes' if studied, 'no' otherwise: ").lower()
             if answer == 'no':
-                print("You should go and study.")
+                print("You should go and study. Remember, learning is the key to success!")
             else:
-                print("Good work!")
+                print("Good work! Keep challenging yourself!")
                 self.studied_today = True
         else:
             print("Studying already done today.")
@@ -46,7 +46,6 @@ print("Welcome to the Student Tracking App!")
 
 # Enter student's full name
 full_name = input("Enter student's full name (first name and surname): ")
-# Capitalize first letter of each word in the name
 student_name = ' '.join([name.capitalize() for name in full_name.split()])
 student_age = int(input("Enter student's age: "))
 student = Student(student_name, student_age)
@@ -54,15 +53,9 @@ student = Student(student_name, student_age)
 # Example activities (you can modify as needed)
 activities = ["Assignment", "Personal Studies"]
 
-# Add activities to the student
 for activity in activities:
     student.add_activity(activity)
 
-# Display student's activities
 student.display_activities()
-
-# Check homework completion
 student.check_homework()
-
-# Check if student studied
 student.check_studied()
