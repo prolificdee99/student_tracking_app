@@ -1,5 +1,6 @@
 #Student Tracking App
 The Student Tracking App is a Python program designed to help students track their activities, homework completion, and studying habits. It allows users to input a student's information, add activities, and monitor progress.
+Also there is a part when the user inputs he or she has not the assignment or studied and then the program encourages the students for positive work
 
 #Table of Contents
 Features
