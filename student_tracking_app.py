@@ -1,61 +1,40 @@
+from datetime import date
+
 class Student:
     def __init__(self, name, age):
         self.name = name
         self.age = age
         self.activities = []
-        self.homework_done = False
-        self.studied_today = False
+        self.homework_done = {}
+        self.studied_today = {}
 
     def add_activity(self, activity):
         self.activities.append(activity)
+        print(f"Activity '{activity}' added.")
 
     def display_activities(self):
         if self.activities:
-            print(f"{self.name}'s activities:")
-            for activity in self.activities:
-                print(activity)
+            print(f"\n{self.name}'s activities:")
+            for idx, activity in enumerate(self.activities, 1):
+                print(f"{idx}. {activity}")
         else:
-            print(f"No activities recorded for {self.name}.")
+            print(f"\nNo activities recorded for {self.name}.")
 
     def check_homework(self):
-        if not self.homework_done:
-            print(f"{self.name}, have you done your assignment?")
-            answer = input("Enter 'yes' if done, 'no' otherwise: ").lower()
-            if answer == 'no':
-                print("You should go and do your assignment. Remember, every effort counts!")
-            else:
-                print("Great job! Keep up the good work!")
-                self.homework_done = True
+        today = str(date.today())
+        if self.homework_done.get(today):
+            print("Homework already done today.")
+            return
+
+        answer = input(f"{self.name}, have you done your assignment today? (yes/no): ").strip().lower()
+        if answer == 'yes':
+            print("Great job! Keep up the good work!")
+            self.homework_done[today] = True
         else:
-            print("Homework already done.")
+            print("You should go and do your assignment. Remember, every effort counts!")
 
     def check_studied(self):
-        if not self.studied_today:
-            print(f"{self.name}, have you studied today?")
-            answer = input("Enter 'yes' if studied, 'no' otherwise: ").lower()
-            if answer == 'no':
-                print("You should go and study. Remember, learning is the key to success!")
-            else:
-                print("Good work! Keep challenging yourself!")
-                self.studied_today = True
-        else:
+        today = str(date.today())
+        if self.studied_today.get(today):
             print("Studying already done today.")
-
-# Welcome message
-print("Welcome to the Student Tracking App!")
-
-# Enter student's full name
-full_name = input("Enter student's full name (first name and surname): ")
-student_name = ' '.join([name.capitalize() for name in full_name.split()])
-student_age = int(input("Enter student's age: "))
-student = Student(student_name, student_age)
-
-# Example activities (you can modify as needed)
-activities = ["Assignment", "Personal Studies"]
-
-for activity in activities:
-    student.add_activity(activity)
-
-student.display_activities()
-student.check_homework()
-student.check_studied()
+            
