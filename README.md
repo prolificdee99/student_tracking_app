@@ -1,47 +1,58 @@
-##Student Tracking App
-The Student Tracking App is a Python program designed to help students monitor their activities, homework completion, and studying habits. It allows users to input a student's information, add activities, and track progress. The app also encourages students to stay productive by providing positive feedback if homework or study tasks are not completed.
+##Multi-Student Tracking App
+The Multi-Student Tracking App is a Python program designed to help track multiple students’ activities, homework completion, and studying habits. It allows users to input student information, add activities, check homework/study status, and view summary reports. The app encourages positive study habits with motivating feedback.
 
 ##Table of Contents
-1.Features
-2.Usage
-3.Requirements
-4.Contributing
-5.License
+Features
+Usage
+Requirements
+Contributing
+License
+
 
 ##Features
-1.Student Information: Collects the student's full name and age.
-2.Activity Tracking: Allows users to add multiple activities and display all recorded activities.
-3.Homework Check: Prompts the user to check if the student has completed their assignment and provides encouraging feedback.
-4.Studying Check: Prompts the user to check if the student has studied today and provides motivating feedback.
-5.Daily Tracking: Keeps track of homework and studying status per day to prevent repeated prompts.
-6.Interactive Menu: Users can navigate through options without restarting the program.
+Multiple Students Support: Add and manage multiple students in one session.
+Student Information: Collects the student's full name and age.
+Activity Tracking: Add multiple activities and display all recorded activities per student.
+Homework Check: Track daily homework completion and provide encouraging feedback.
+Studying Check: Track daily studying habits and provide motivating feedback.
+Daily Tracking: Keeps track of homework and study status per day.
+Summary Report: View a summary of each student’s activities, homework, and studying for today.
+Interactive Menus: Separate main menu for managing students and individual menus for each student.
+
 
 ##Usage
-1.Run the Python script:
-python student_tracking_app.py
+Run the Python script: python student_tracking_app.py
 
-2.Follow the on-screen prompts:
+Follow the on-screen prompts:
 
-3.Enter the student's full name.
+Add new students by entering their full name and age.
 
-4.Enter the student's age.
+Use the main menu to select a student to manage.
 
-5.Use the menu to add activities, display activities, check homework, or check studying.
+Within the student menu, you can:
 
-6.The app will provide feedback based on the user's input, encouraging positive study habits and completion of tasks.
+Add activities
+
+Display activities
+
+Check homework completion
+
+Check if the student studied
+
+Show a summary report for the student
+
+Return to the main menu to manage other students or exit the program.
+
 
 ##Requirements
 Python 3.x
 
-##Contributing
-Contributions to the Student Tracking App are welcome! To contribute:
+
+##Contributions to the Multi-Student Tracking App are welcome! To contribute:
 Fork the repository on GitHub.
-Create a new branch:
-git checkout -b feature/improvement-or-fix
-Make your changes and commit them:
-git commit -am "Add new feature or improvement"
-Push your changes to your fork:
-git push origin feature/improvement-or-fix
+Create a new branch: git checkout -b feature/improvement-or-fix
+Make your changes and commit them: git commit -am "Add new feature or improvement"
+Push your changes to your fork: git push origin feature/improvement-or-fix
 Create a pull request on the original repository.
 
 ##License
