@@ -24,8 +24,8 @@ Python 3.x installed
 
 📂 File Structure
 student_tracking_app/
-│-- student_tracking_app.py   # Main Python script
-│-- README.md                 # Project documentation
+│-- README.md                             #Project documentation
+│-- student_tracking_app.py               # Main Python script
 
 🤝 Contributing
 Contributions are welcome!
